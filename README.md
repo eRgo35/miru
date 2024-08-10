@@ -25,13 +25,17 @@
 </p>
 
 ## **About**
+
 A pure JS BitTorrent streaming environment, with a built-in list manager. Imagine qBit + Taiga + MPV, all in a single package, but streamed real-time. Completly ad free with no tracking/data collection.
 
 This app is meant to feel look, work and perform like a streaming website/app, while providing all the advantages of torrenting, like file downloads, higher download speeds, better video quality and quicker releases.
 
 Unlike qBit's sequential, seeking into undownloaded data will prioritise downloading that data, instead of flat out closing MPV.
+
 ## **Features**
+
 ### **Anime:**
+
 - full AniList integration
   - filter anime by name, genre, season, year, format, status
   - view anime on your planning and watching list
@@ -45,7 +49,9 @@ Unlike qBit's sequential, seeking into undownloaded data will prioritise downloa
 - view latest releases on any custom RSS
 - airing schedule
 - find anime by image [just paste an image into the app]
+
 ### **Video:**
+
 - full subtitle support
   - support for softcoded subtitles
   - support for external subtitle files
@@ -79,7 +85,9 @@ Unlike qBit's sequential, seeking into undownloaded data will prioritise downloa
 - autoplay next episode
 - multi-audio support
 - torrent download progress on the seek bar
+
 ### **Torrent:**
+
 - select downloads folder
 - specify download/upload speeds
 - support for most popular BEP's
@@ -93,6 +101,7 @@ Unlike qBit's sequential, seeking into undownloaded data will prioritise downloa
 ### Arch
 
 If you use paru:
+
 ```bash
 paru -S miru-bin
 ```
@@ -107,18 +116,43 @@ yay -S miru-bin
 
 - Download the `linux-Miru-version.deb` from the [releases](https://github.com/ThaUnknown/miru/releases/latest) page.
 - Install the deb file with package manager.
+
 ```bash
 apt install linux-Miru-*.deb
 ```
 
 ## **Building and Development**
 
-*dont*
+```
+$ cd common
+$ pnpm i
+```
+
+```
+$ cd electron
+$ pnpm i
+$ pnpn start
+```
+
+Wayland workaround:
+
+```
+$ ELECTRON_OZONE_PLATFORM_HINT=x11 pnpm start
+```
+
+Tauri init:
+
+```
+$ cd tauri
+$ pnpm i
+$ pnpm tauri init
+```
 
 Dependencies:
- - Node 16 or above
- - PNPM
- - Docker
- - Android Debug Bridge
- - Java 18 or above [probably?]
- - maybe others... have fun.
+
+- Node 16 or above
+- PNPM
+- Docker
+- Android Debug Bridge
+- Java 18 or above [probably?]
+- maybe others... have fun.
